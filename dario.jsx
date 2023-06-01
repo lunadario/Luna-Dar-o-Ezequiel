@@ -4,18 +4,24 @@ import Formulario from './components/Formulario'
 import { useState } from 'react'
 
 function App() {
+
+  <h1> hola</h1>
   const [persona, setPersona] = useState({})
 
   const guardarPersona = (nombre, edad) => {
     setPersona({ nombre, edad })
   }
+
   return (
-    <>
+    <>    
       <Formulario guardarPersona={guardarPersona} />
       {Object.keys(persona).length === 0 ? undefined : (
         <Card nombre={persona.nombre} edad={persona.edad} />
+
       )}
-    </>
+  
+</>
+
   )
 }
 
